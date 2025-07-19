@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-<!-- Changes the quantity of stew base (default=2.5) -->
+<!-- Changes the quantity of stew base from 50 to 2 -->
 <Operation Class="PatchOperationReplace">
   <xpath>Defs/RecipeDef[defName="CS_CookStewFine"]/ingredients/li[filter/customSummary="stew base"]/count</xpath>
   <value>
-    <count>0.1</count>
+    <count>0.1</count> <!-- (default=2.5) -->
   </value>
 </Operation>
 
-<!-- Changes the quantity of vegetable ingredients (default=1.0) -->
+<!-- Changes the quantity of vegetable ingredients from 20 to 100 -->
 <Operation Class="PatchOperationReplace">
   <xpath>Defs/RecipeDef[defName="CS_CookStewFine"]/ingredients/li[filter/categories/li[text()="PlantFoodRaw"]]/count</xpath>
   <value>
-    <count>5.0</count>
+    <count>5.0</count> <!-- (default=1.0) -->
   </value>
 </Operation>
 
-<!-- Changes the quantity of stew produced (default=10) -->
+<!-- Changes the quantity of stew produced from 10 to 20 -->
 <Operation Class="PatchOperationReplace">
   <xpath>Defs/RecipeDef[defName="CS_CookStewFine"]/products/CS_StewFine</xpath>
   <value>
-    <CS_StewFine>20</CS_StewFine>
+    <CS_StewFine>20</CS_StewFine> <!-- (default=10) -->
   </value>
 </Operation>
 
